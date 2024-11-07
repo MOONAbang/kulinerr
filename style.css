@@ -1,0 +1,979 @@
+/* Halaman Pengantar */
+body {
+    background-color: #f3efea;
+    font-family: 'Merriweather', serif; /* Font serif untuk kesan tradisional */
+    margin: 0;
+    padding: 0;
+}
+
+/* Dekorasi header dengan batik */
+header {
+    background-image: url('image/batikmanuk.jpg');
+    background-size: cover; /* Mengatur gambar agar menutupi header */
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 2.5rem;
+    border-bottom: 5px solid #ffcc80; /* Garis bawah sebagai aksen */
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna hitam transparan */
+    z-index: 1;
+}
+
+header h1, header p {
+    position: relative;
+    z-index: 2; /* Agar teks berada di atas overlay */
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Bayangan untuk kesan elegan */
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    letter-spacing: 2px;
+}
+
+/* Styling untuk form input */
+form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; /* Memusatkan form secara horizontal */
+}
+
+form label {
+    font-size: 1.2rem;
+    color: #a0522d;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+form input {
+    width: 80%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 1rem 2rem;
+    background-color: #a0522d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #8b4513;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-top: 5px solid #ffcc80; /* Tambahkan aksen garis */
+}
+
+/* Kuliner Container */
+.kuliner-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background: linear-gradient(to bottom, #f9f5f0, #f3efea); /* Background gradasi lembut */
+}
+
+/* Kuliner Item */
+.kuliner-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Shadow lebih lembut */
+    margin: 1.5rem;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s;
+    border: 1px solid #e0e0e0; /* Border halus */
+}
+
+.kuliner-item:hover {
+    transform: scale(1.05); /* Sedikit zoom saat hover */
+}
+
+.kuliner-item img {
+    width: 100%;
+    height: 180px; /* Sesuaikan tinggi */
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 3px solid #ffcc80; /* Garis bawah gambar */
+}
+
+.kuliner-item h2 {
+    font-size: 1.8rem;
+    color: #a0522d; /* Warna judul yang mencerminkan unsur tradisional */
+    margin: 0.5rem 0;
+}
+
+.kuliner-item p {
+    padding: 0.5rem 1rem;
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Styling tabel kuliner */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+table th {
+    background-color: #ff5722;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Tombol Kembali */
+.back-button-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: #a0522d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #8b4513;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan saat hover */
+}
+
+
+/* Halaman pengantar responsive */
+@media (max-width: 768px) {
+    form {
+        width: 80%;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    table th, table td {
+        font-size: 1rem;
+    }
+
+    .kuliner-item {
+        width: 80%;
+    }
+}
+
+/* Desain tambahan */
+.kuliner-item:hover img {
+    filter: brightness(0.9);
+}
+
+.btn:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan tombol saat di-hover */
+}
+
+/* Styling untuk detail halaman kuliner */
+.detail-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.detail-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #ffcc80; /* Garis bawah gambar */
+}
+
+.detail-content h2 {
+    margin-top: 1rem;
+    color: #a0522d;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 1px 1px #8b4513;
+}
+
+.detail-content ul, .detail-content ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+body {
+    background: #fefde3;
+  }
+  .slope {
+    background: #cadc88;
+    width: 100%;
+    height: 100px;
+    border-radius: 50% 50% 0px 0px / 100% 100% 0px 0px;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .slope:before {
+    content: "";
+    background: #f2edb4;
+    border-radius: 50%;
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    margin-left: -40px;
+    top: -5px;
+  }
+  .background {
+    width: 350px;
+    height: 445px;
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    left: -200px;
+    right: -200px;
+  }
+
+/* Efek Halus pada Header */
+header {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+header:hover {
+    transform: scale(1.02);
+}
+
+/* Efek Pergerakan Halus saat Scroll */
+body {
+    scroll-behavior: smooth;
+}
+
+/* Efek Hover untuk Link di Header */
+header h1, header p {
+    transition: color 0.3s ease;
+}
+header h1:hover, header p:hover {
+    color: #ffcc80;
+}
+
+/* Efek Hover untuk Kuliner Item */
+.kuliner-item {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.kuliner-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Animasi Halus pada Gambar Kuliner */
+.kuliner-item img {
+    transition: filter 0.3s, transform 0.3s;
+}
+.kuliner-item:hover img {
+    filter: brightness(0.85);
+    transform: scale(1.03);
+}
+
+/* Efek Hover untuk Tombol */
+form button, .btn-back {
+    position: relative;
+    overflow: hidden;
+}
+form button::after, .btn-back::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+form button:hover::after, .btn-back:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+form button, .btn-back {
+    position: relative;
+    z-index: 1;
+}
+
+/* Animasi Hover pada Tabel */
+table th, table td {
+    transition: background-color 0.3s ease;
+}
+table tr:hover {
+    background-color: #ffe0b2;
+}
+
+/* Efek Smooth Fade-in pada .kuliner-container */
+.kuliner-container {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards ease;
+}
+
+/* Fade-in Animasi */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efek Pada Detail Halaman */
+.detail-container {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInScale 0.8s forwards ease;
+}
+
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Efek Hover pada Batas Slope */
+.slope {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.slope:hover {
+    transform: scale(1.05);
+    background-color: #b2cb70;
+}
+
+/* Efek Hover pada Footer */
+footer {
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+footer:hover {
+    background-color: #444;
+}
+footer:hover::before {
+    width: 100%;
+}
+
+/* Efek Parallax untuk Latar Background */
+.background {
+    animation: parallax 10s infinite alternate;
+}
+
+@keyframes parallax {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(20px);
+    }
+}
+
+/* Container untuk tombol Masuk dan Kembali */
+.button-container, .back-button-container {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Tombol Masuk */
+.btn-masuk, .btn-back {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: #a0522d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Efek saat hover */
+.btn-masuk:hover, .btn-back:hover {
+    background-color: #8b4513;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan saat hover */
+}
+
+/* Styling utama untuk halaman perkenalan tim */
+.team-introduction {
+    text-align: center;
+    padding: 2.5rem;
+    background-color: #f5f1e8; /* Latar belakang krem lembut */
+    color: #5a463a; /* Warna teks klasik */
+    font-family: 'Georgia', serif; /* Font klasik */
+}
+
+.team-introduction h2 {
+    font-size: 2.7rem;
+    color: #8b4513; /* Warna coklat elegan */
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-introduction p {
+    font-size: 1.2rem;
+    color: #7d6e60;
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+    line-height: 1.7;
+    padding: 0 1rem;
+    background: rgba(255, 239, 205, 0.6); /* Warna latar belakang lembut */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Kontainer anggota tim */
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+/* Kartu anggota tim */
+.team-member {
+    background-color: #fff8f0;
+    border: 1px solid #e5d4c3;
+    border-radius: 15px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 1.5rem;
+    width: 250px;
+    transition: transform 0.4s, box-shadow 0.4s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.team-member:hover {
+    transform: scale(1.07);
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Gambar anggota tim dengan efek dekorasi */
+.team-member img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    border: 4px solid #d0b49e;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.team-member:hover img {
+    transform: scale(1.05);
+}
+
+.team-member h3 {
+    font-size: 1.6rem;
+    color: #8b4513;
+    margin: 0.5rem 0;
+    letter-spacing: 1px;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #5a463a;
+    margin: 0.3rem 0;
+    line-height: 1.5;
+    padding: 0.5rem;
+}
+
+.team-member .position {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #b57251;
+    margin-bottom: 0.8rem;
+}
+
+/* Efek dekoratif klasik */
+.team-member::before, .team-member::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #e7ccb5;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.team-member::before {
+    top: -15px;
+    left: -15px;
+}
+
+.team-member::after {
+    bottom: -15px;
+    right: -15px;
+}
+
+/* Tombol Kembali yang elegan */
+.button-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #8b4513;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-back:hover {
+    background-color: #b57251;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling tabel perkenalan tim */
+.team-table-container {
+    padding: 2rem;
+    background-color: #faf3e0; /* Latar belakang krem lembut */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Bayangan lembut */
+    margin: 2rem auto;
+    max-width: 900px;
+}
+
+.team-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    overflow: hidden;
+    font-family: 'Georgia', serif;
+    color: #5a463a; /* Warna teks klasik */
+}
+
+.team-table th,
+.team-table td {
+    padding: 1.2rem;
+    text-align: center;
+    border-bottom: 1px solid #e0d4c3; /* Warna garis klasik */
+    position: relative;
+}
+
+.team-table th {
+    background-color: #8b4513;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-right: 1px solid #faf3e0;
+}
+
+.team-table th:last-child {
+    border-right: none;
+}
+
+/* Alternatif warna baris */
+.team-table tr:nth-child(even) {
+    background-color: #fdf7ec;
+}
+
+.team-table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Efek hover untuk baris */
+.team-table tr:hover {
+    background-color: #f2eddb;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Dekorasi khusus di sel */
+.team-table td {
+    font-size: 1rem;
+    color: #5a463a;
+}
+
+.team-table td.position {
+    font-weight: bold;
+    color: #b57251;
+}
+
+/* Ikon dekoratif tradisional */
+.team-table td::before {
+    content: '•';
+    color: #d0b49e; /* Warna klasik lembut */
+    font-size: 1.5rem;
+    padding-right: 0.5rem;
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Efek animasi modern */
+@keyframes highlight {
+    0% { background-color: #ffebcd; }
+    50% { background-color: #fef3d4; }
+    100% { background-color: #ffebcd; }
+}
+
+.team-table tr:hover td {
+    animation: highlight 1s ease-in-out infinite alternate;
+}
+
+/* Media query untuk responsif */
+@media (max-width: 768px) {
+    .team-table th, .team-table td {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    .team-table-container {
+        padding: 1.5rem;
+    }
+}
+
+/* Umum */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f1e1; /* Latar belakang hangat yang lembut */
+}
+
+header {
+    background-color: #6a4e23; /* Warna coklat batik */
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    border-bottom: 4px solid #d0a44f; /* Batas bawah untuk efek elegan */
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+h2, h3 {
+    color: #6a4e23; /* Coklat yang lebih cerah */
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    padding: 0 1.5rem;
+}
+
+/* Section: Introduction */
+.intro {
+    background-color: #fff;
+    padding: 3rem 2rem;
+    margin: 2rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    border-left: 6px solid #d08c42; /* Garis tradisional */
+}
+
+/* Section: Kategori Kuliner */
+.kategori {
+    padding: 4rem 2rem;
+    background-color: #fff7e6; /* Latar belakang lembut dengan sentuhan kuning */
+}
+
+.kategori-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.kategori-item {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 30%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.kategori-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    filter: brightness(0.85);
+    transition: filter 0.3s ease;
+}
+
+.kategori-item h3 {
+    background-color: #d08c42; /* Warna yang cerah untuk header */
+    color: white;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.kategori-item p {
+    padding: 1.5rem;
+    font-size: 1rem;
+    color: #4a4a4a;
+}
+
+/* Efek Hover pada kategori item */
+.kategori-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.kategori-item:hover img {
+    filter: brightness(1);
+}
+
+/* Section: Manfaat Kuliner */
+.manfaat {
+    background-color: #fff;
+    padding: 3rem 2rem;
+    margin: 3rem;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-top: 6px solid #d08c42;
+}
+
+/* Footer */
+footer {
+    background-color: #6a4e23;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    font-size: 1.1rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Ornamen atau dekorasi tambahan untuk desain lebih tradisional */
+footer::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: url('image/ornament.png') repeat-x;
+    margin-bottom: 1rem;
+}
+
+/* Desain Tabel dan Detail Kuliner */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #d08c42;
+    color: white;
+    font-weight: bold;
+}
+
+table td {
+    background-color: #f9f5eb;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .kategori-item {
+        width: 48%;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.3rem;
+    }
+
+    .kategori-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .kategori-item {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #6a4e23; /* Warna coklat batik */
+    color: white; /* Mengubah warna teks menjadi putih untuk kontras yang lebih baik */
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    font-size: 1.1rem;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #f4f1e1; /* Warna terang untuk teks di dalam footer */
+}
+
+/* Ornamen atau dekorasi tambahan untuk desain lebih tradisional */
+footer::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: url('image/ornament.png') repeat-x;
+    margin-bottom: 1rem;
+}
+
+/* Dekorasi header dengan batik */
+header {
+    background-image: url('image/batikmanuk.jpg');
+    background-size: cover; /* Mengatur gambar agar menutupi header */
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 2.5rem;
+    border-bottom: 5px solid #ffcc80; /* Garis bawah sebagai aksen */
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna hitam transparan */
+    z-index: 1;
+}
+
+header h1, header p {
+    position: relative;
+    z-index: 2; /* Agar teks berada di atas overlay */
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Bayangan untuk kesan elegan */
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    letter-spacing: 2px;
+    color: #f4f1e1; /* Mengubah warna teks agar lebih terang dan lebih terbaca */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Memberikan bayangan lembut pada teks untuk kontras lebih baik */
+}
+
